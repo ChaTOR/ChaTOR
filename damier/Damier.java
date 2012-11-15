@@ -210,8 +210,7 @@ public class Damier extends Object
 			}
 			
 		}
-		
-		System.out.println(test.size());
+
 		
 		if(test.size() == 1) // Si i n'y a qu'un seul lien créé, on en rajoute un avec le point situé en diagonale (x5,6,7,8)
 		{
@@ -460,25 +459,39 @@ public class Damier extends Object
 	{
 		
 		int i;
-		int sl = pt.size();
+		int sp = pt.size();
 		int pos;
 		
 		Point p;
 		Point ante = pt.lastElement();
 		
-		for(i=0;i<sl;i++)
+		for(i=0;i<sp;i++)
 		{
-			
 			if(pt.elementAt(i).h == sup)
 			{
-				
+								
 				p = pt.elementAt(i);
+				
+				for(i=0;i<lien.size();i++)
+				{
+					
+					Link lit = lien.elementAt(i);
+					
+					if(lit.px == p || lit.py == p)
+					{
+						
+						lien.removeElementAt(i);
+						i = i -1;
+						
+					}			
+				
+				}		
 				
 				pos = pt.indexOf(p);
 				
 				pt.setElementAt(ante, pos);
 				
-				pt.removeElementAt(sl - 1);
+				pt.removeElementAt(sp - 1);
 				
 				
 			}

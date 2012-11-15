@@ -16,8 +16,12 @@ public class Test extends Object
 		damiertest.ajouter("p3");
 		damiertest.ajouter("p4");
 		damiertest.ajouter("p5");
+		damiertest.ajouter("p6");
 
-	    damiertest.afficherlink();		
+
+		damiertest.delete("p4");
+		damiertest.afficher();
+		damiertest.afficherlink();		
 	
 				
 		

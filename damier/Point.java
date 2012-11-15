@@ -8,7 +8,7 @@ public class Point extends Object
 	public Point (String h1,int x1, int y1)
 	{
 		
-		// un point est compos� de son nom et de sa position en coordonn�e cart�sienne
+		// un point est composé de son nom et de sa position en coordonnées cartésiennes
 		h = h1;
 		x = x1;
 		y = y1;

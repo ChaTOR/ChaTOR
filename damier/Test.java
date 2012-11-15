@@ -5,6 +5,7 @@ public class Test extends Object
 	public static void main (String args[])
 	{
 	   
+		
 		Vector<Point> pt1 = new Vector<Point>();
 		Vector<Link> lien1 = new Vector<Link>();
 		

@@ -9,18 +9,23 @@ public class Damier extends Object
 	{
 		Point a = new Point (lolo,0,0);
 		
-		// défini les deux vector qui forme le damier du réseau
+		
+		
+		// dï¿½fini les deux vector qui forme le damier du rï¿½seau
 	    pt = pt1;
 	    lien = lien1;
 	    
-	    // défini le centre du damier sur le premier poste qui crée le réseau
+	    // dï¿½fini le centre du damier sur le premier poste qui crï¿½e le rï¿½seau
 		pt.addElement(a);		
 		
 	}
 	
 	void ajouter(String beuh)
 	{
-		// méthode d'ajout d'un point (placement + lien avec les autres points)
+		
+		
+		
+		// mï¿½thode d'ajout d'un point (placement + lien avec les autres points)
 		
 		int a;
 		int b;
@@ -50,7 +55,7 @@ public class Damier extends Object
 			
 		}
 		
-		if(s > 1)// algorithme qui détermine la position du prochain point
+		if(s > 1)// algorithme qui dï¿½termine la position du prochain point
 		{
 			
 			Point ante = pt.lastElement();
@@ -109,7 +114,7 @@ public class Damier extends Object
 
 	void ajoutlink(String beuh,int a,int b)
 	{
-		// Méthode auxiliaire permettant de définir les liens a établir
+		// Mï¿½thode auxiliaire permettant de dï¿½finir les liens a ï¿½tablir
 		
 		Vector<Link> test = new Vector<Link>();
 		
@@ -121,7 +126,7 @@ public class Damier extends Object
 		
 		Point x  = new Point(beuh,a,b);
 			
-		// Associe a x1,2,3,4,5,6,7,8 les points composants le carré autour du point ajouté
+		// Associe a x1,2,3,4,5,6,7,8 les points composants le carrï¿½ autour du point ajoutï¿½
 		
 		for(i=0;i<sp;i++) 
 		{
@@ -208,7 +213,7 @@ public class Damier extends Object
 		
 		System.out.println(test.size());
 		
-		if(test.size() == 1) // Si i n'y a qu'un seul lien crée, on en rajoute un avec le point situé en diagonale (x5,6,7,8)
+		if(test.size() == 1) // Si i n'y a qu'un seul lien crï¿½e, on en rajoute un avec le point situï¿½ en diagonale (x5,6,7,8)
 		{
 			
 			Link transfert = test.elementAt(0);
@@ -298,7 +303,7 @@ public class Damier extends Object
 			
 		}
 		
-		if(test.size() > 1) // Si il y plus de deux lien crée, cela est suffisant
+		if(test.size() > 1) // Si il y plus de deux lien crï¿½e, cela est suffisant
 		{
 			for(i=0;i<test.size();i++)
 			{

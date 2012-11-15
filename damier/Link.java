@@ -7,7 +7,9 @@ public class Link extends Object
 	
 	public Link (Point p1, Point p2)
 	{
-		// un lien est composé de deux point
+		
+		
+		// un lien est composï¿½ de deux point
 		px = p1;
 		py = p2;
 	 	

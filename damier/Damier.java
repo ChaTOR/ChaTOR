@@ -11,7 +11,7 @@ public class Damier extends Object
 		
 		
 		
-		// nédéfini les deux vector qui forme le damier du réseau
+		// défini les deux vector qui forme le damier du réseau
 	    pt = pt1;
 	    lien = lien1;
 	    

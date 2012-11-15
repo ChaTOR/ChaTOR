@@ -20,5 +20,16 @@ public class Point extends Object
 		           (h+"("+x+","+y+")");
 	}
 	
+	public String toString() {
+		return "Name: "+h+", X: "+x+", Y: "+y;
+	}
+	
+	public boolean equals(Point p2) {
+		if (this.h.equals(p2.h) && this.x == p2.x && this.y == p2.y) {
+			return true;
+		}
+		return false;
+	}
+	
 
 }

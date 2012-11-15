@@ -417,36 +417,28 @@ public class Damier extends Object
 				Point t1x = testl.elementAt(i).px;
 				Point t1y = testl.elementAt(i).py;
 				
-				if(t1x == x1 || t1y == x1)
+				if(x1 != null && (t1x.equals(x1) || t1y.equals(x1)))
 				{
-				
 					testl.removeElementAt(i);
 					i-=1;
-					
 				}
 				
-				if(t1x == x2 || t1y == x2)
+				if(x2 != null && (t1x.equals(x2) || t1y.equals(x2)))
 				{
-				
 					testl.removeElementAt(i);
 					i-=1;
-					
 				}
 				
-				if(t1x == x3 || t1y == x3)
+				if(x3 != null && (t1x.equals(x3) || t1y.equals(x3)))
 				{
-				
 					testl.removeElementAt(i);
 					i-=1;
-					
 				}
 				
-				if(t1x == x4 || t1y == x4)
+				if(x4 != null && (t1x.equals(x4) || t1y.equals(x4)))
 				{
-				
 					testl.removeElementAt(i);
 					i-=1;
-					
 				}
 				
 								

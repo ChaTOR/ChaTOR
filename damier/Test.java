@@ -17,6 +17,7 @@ public class Test extends Object
 		damiertest.ajouter("p4");
 		damiertest.ajouter("p5");
 		damiertest.ajouter("p6");
+		damiertest.ajouter("p7");
 
 
 		damiertest.delete("p4");

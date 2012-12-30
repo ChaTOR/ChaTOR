@@ -7,5 +7,7 @@
 	<classpathentry exported="true" kind="lib" path="lib/h2.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/jgraphx.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/torlib.jar"/>
+	<classpathentry kind="lib" path="lib/torlib_bcprov.jar"/>
+	<classpathentry kind="lib" path="lib/torlib_jdom.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -32,18 +32,20 @@ public class Test_mesg extends Object
 
 	    // connect - will be redirected to and tunneled by Tor anonymous network instead of direct TCP/IP connection
 	    InetSocketAddress address = new InetSocketAddress(/*hostname*/"silvertunnel.org", /*port*/80);
-	    s.connect(address);
+	    try {
+			s.connect(address);
 
-	    // transfer data
-	    OutputStream os = s.getOutputStream();
-	    InputStream is = s.getInputStream();
-	    os.write(20);
-	    is.read();
+		    // transfer data
+		    OutputStream os = s.getOutputStream();
+		    InputStream is = s.getInputStream();
+		    os.write(20);
+		    is.read();
 
-	    // close connection
-	    s.close;
-		
-		
+		    // close connection
+		    s.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

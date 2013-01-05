@@ -3,6 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="damier"/>
 	<classpathentry kind="src" path="Envoi-mesg"/>
+	<classpathentry kind="src" path="ClientServer"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry exported="true" kind="lib" path="lib/h2.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/jgraphx.jar"/>

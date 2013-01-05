@@ -20,6 +20,7 @@ public class Test_mesg extends Object
 
 	    //  wait (block the current thread) until this netLayer instance is up and ready
 	    netLayer.waitUntilReady();
+	    System.out.println("READY");
 
 	    // redirect to the selected NetLayer
 	    SocketGlobalUtil.setNetLayerUsedBySocketImplFactory(netLayer);
@@ -34,15 +35,24 @@ public class Test_mesg extends Object
 	    InetSocketAddress address = new InetSocketAddress(/*hostname*/"silvertunnel.org", /*port*/80);
 	    try {
 			s.connect(address);
+			System.out.println("CONNECTED");
 
 		    // transfer data
 		    OutputStream os = s.getOutputStream();
 		    InputStream is = s.getInputStream();
-		    os.write(20);
-		    is.read();
+		    DataOutputStream dos = new DataOutputStream(os);
+		    DataInputStream dis = new DataInputStream(is);
+
+		    dos.writeBytes("GET / HTTP/1.1\n");
+		    System.out.println("GET / HTTP/1.1 SENT");
+		    System.out.println(dis.readUTF());
+		    System.out.println("READ");
 
 		    // close connection
-		    s.close();
+		    dos.close();
+		    os.close();
+		    dis.close();
+		    is.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

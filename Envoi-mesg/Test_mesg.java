@@ -1,6 +1,11 @@
 import org.silvertunnel.netlib.adapter.socket.SocketGlobalUtil;
 import java.net.*;
+import java.util.Scanner;
+
 import org.silvertunnel.netlib.api.*;
+
+import sun.print.resources.serviceui;
+
 import java.io.*;
 
 
@@ -27,12 +32,12 @@ public class Test_mesg extends Object
 		
 		// -----------------------------------------------------------------------------------------------
 		
-		
+	    
 	    // create a socket
 	    Socket s = new Socket();
 
 	    // connect - will be redirected to and tunneled by Tor anonymous network instead of direct TCP/IP connection
-	    InetSocketAddress address = new InetSocketAddress(/*hostname*/"silvertunnel.org", /*port*/80);
+	    InetSocketAddress address = new InetSocketAddress(/*hostname*/"217.70.182.162", /*port*/80);
 	    try {
 			s.connect(address);
 			System.out.println("CONNECTED");
@@ -40,22 +45,28 @@ public class Test_mesg extends Object
 		    // transfer data
 		    OutputStream os = s.getOutputStream();
 		    InputStream is = s.getInputStream();
-		    DataOutputStream dos = new DataOutputStream(os);
-		    DataInputStream dis = new DataInputStream(is);
+		    PrintWriter pos = new PrintWriter(os, true);
+		    Scanner sin = new Scanner(is);
 
-		    dos.writeBytes("GET / HTTP/1.1\n");
-		    System.out.println("GET / HTTP/1.1 SENT");
-		    System.out.println(dis.readUTF());
-		    System.out.println("READ");
+		    pos.println("GET / HTTP1.1\n");
+		    System.out.println("GET / HTTP1.1 SENT");
+		    
+		    while (true) {
+		    	if (sin.hasNext()) {
+		    		System.out.println("RECEIVED : "+sin.nextLine());
+		    	} else {
+		    		System.out.println("CLOSED");
+		    		break;
+		    	}
+		    }
+		    
+		    System.out.println("CLOSED 2");
 
 		    // close connection
-		    dos.close();
-		    os.close();
-		    dis.close();
-		    is.close();
+		    s.close();
+		    System.exit(0);
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
+		}	    
 	}
-
 }

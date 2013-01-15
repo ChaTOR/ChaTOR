@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 import org.silvertunnel.netlib.api.*;
 
-import sun.print.resources.serviceui;
-
 import java.io.*;
 
 
@@ -35,9 +33,9 @@ public class Test_mesg extends Object
 	    
 	    // create a socket
 	    Socket s = new Socket();
-
+	    
 	    // connect - will be redirected to and tunneled by Tor anonymous network instead of direct TCP/IP connection
-	    InetSocketAddress address = new InetSocketAddress(/*hostname*/"217.70.182.162", /*port*/80);
+	    InetSocketAddress address = new InetSocketAddress(/*hostname*/"chbb7uc6wh2rvpfk.onion", /*port*/2340);
 	    try {
 			s.connect(address);
 			System.out.println("CONNECTED");
@@ -64,6 +62,7 @@ public class Test_mesg extends Object
 
 		    // close connection
 		    s.close();
+		    sin.close();
 		    System.exit(0);
 		} catch (IOException e) {
 			e.printStackTrace();

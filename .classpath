@@ -4,11 +4,11 @@
 	<classpathentry kind="src" path="damier"/>
 	<classpathentry kind="src" path="Envoi-mesg"/>
 	<classpathentry kind="src" path="ClientServer"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry exported="true" kind="lib" path="lib/h2.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/jgraphx.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/torlib.jar"/>
-	<classpathentry kind="lib" path="lib/torlib_bcprov.jar"/>
-	<classpathentry kind="lib" path="lib/torlib_jdom.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/torlib_bcprov.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/torlib_jdom.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
